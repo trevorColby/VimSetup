@@ -14,3 +14,6 @@ Everything you need for Vim
 - The autoloads, colorschemes, and bundles
 	- These are for the various plugins and setting choices
 - A file containing helpful vim commands
+- Note: Scripting is open to edits
+	- when you pull the respository feel free to change
+	- Common edits: changing where/what things are stored or named
