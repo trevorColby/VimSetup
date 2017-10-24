@@ -13,4 +13,4 @@ Everything you need for Vim
 	- These plugins leverage the dein dark powered plugin manager
 - The autoloads, colorschemes, and bundles
 	- These are for the various plugins and setting choices
-- 
+- A file containing helpful vim commands
