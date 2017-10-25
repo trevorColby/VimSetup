@@ -24,9 +24,43 @@ INSTALL_DIR="${PLUGIN_DIR}/repos/github.com/Shougo/dein.vim"
     echo "  \" Required:" >> $HOME/.vimrc
     echo "  call dein#add('$INSTALL_DIR')" >> $HOME/.vimrc
     echo "" >> $HOME/.vimrc
-    echo "  \" Add or remove your plugins here:" >> $HOME/.vimrc
+    echo "  \"-------------------- Your Plugins Here ----------------" >> $HOME/.vimrc
     echo "  call dein#add('Shougo/neosnippet.vim')" >> $HOME/.vimrc
     echo "  call dein#add('Shougo/neosnippet-snippets')" >> $HOME/.vimrc
+    echo "\"------------------Macro Generated Dein Plugin Calls--------" >> $HOME/.vimrc
+    echo "call dein#add('Shougo/denite.nvim') \"   denite " >> $HOME/.vimrc 
+    echo "call dein#add('Shougo/neocomplete.vim') \"neocomplete" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-sensible')   "  >> $HOME/.vimrc
+    echo "call dein#add('vim-airline/vim-airline')  \"vim-airline" >> $HOME/.vimrc
+    echo "call dein#add('vim-airline/vim-airline-themes')  \"vim-airline-themes" >> $HOME/.vimrc
+    echo "call dein#add('luochen1990/rainbow')   \"rainbow-parantheses" >> $HOME/.vimrc
+    echo "call dein#add('joshdick/onedark.vim') \"onedark" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-commentary') \"commentary" >> $HOME/.vimrc
+    echo "call dein#add('hail2u/vim-css3-syntax') \"css3-syntax" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-dispatch') \"dispatch" >> $HOME/.vimrc
+    echo "call dein#add('editorconfig/editorconfig-vim') \"Editorconfig" >> $HOME/.vimrc
+    echo "call dein#add('kana/vim-fakeclip') \"fakeclip" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-fugitive') \"fugitive" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-git') \"  vim-git" >> $HOME/.vimrc
+    echo "call dein#add('airblade/vim-gitgutter') \"  gitgutter" >> $HOME/.vimrc
+    echo "call dein#add('pangloss/vim-javascript') \"  javascript" >> $HOME/.vimrc
+    echo "call dein#add('elzr/vim-json') \"  json" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-markdown') \"  markdown" >> $HOME/.vimrc
+    echo "call dein#add('nelstrom/vim-markdown-folding') \"  markdown-folding" >> $HOME/.vimrc
+    echo "call dein#add('scrooloose/nerdtree') \"  nerdtree" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-repeat') \"  repeat" >> $HOME/.vimrc
+    echo "call dein#add('jpalardy/vim-slime') \"  slime" >> $HOME/.vimrc
+    echo "call dein#add('honza/vim-snippets') \"  snippets" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-surround') \"  surround" >> $HOME/.vimrc
+    echo "call dein#add('scrooloose/syntastic') \"  syntastic" >> $HOME/.vimrc
+    echo "call dein#add('majutsushi/tagbar') \"  tagbar" >> $HOME/.vimrc
+    echo "call dein#add('ericpruitt/tmux.vim') \"  tmux" >> $HOME/.vimrc
+    echo "call dein#add('Quramy/tsuquyomi') \"  tsuquyomi" >> $HOME/.vimrc
+    echo "call dein#add('leafgarland/typescript-vim') \"  typescript-vim" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-unimpaired') \"  unimpaired" >> $HOME/.vimrc
+    echo "call dein#add('Shougo/vimproc.vim') \"  vimproc" >> $HOME/.vimrc
+    echo "call dein#add('tpope/vim-rhubarb') \"  rubarb" >> $HOME/.vimrc
+
     echo ""
     echo "  \" You can specify revision/branch/tag." >> $HOME/.vimrc
     echo "  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })" >> $HOME/.vimrc
