@@ -4,7 +4,7 @@ Everything you need for Vim
 #### This respository contains:
 - First script will compile Vim with both python and python3 support
 	- Create a .vimrc file in your home directory
-- Second script is designed to get dein plugin manager
+- pluginInstall.sh is designed to get dein plugin manager
 	- Curl an installer.sh for use into your home directory
 	- Run installer.sh: installs dein plugin manager: Shuogo
 	- Create a .vim/bundles directory to store the plugin manager
