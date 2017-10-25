@@ -1,5 +1,5 @@
 # VimSetup
-Everything you need for Vim
+### Everything you need for Vim
 ###### Trevor Colby
 ###### 10-25-2017
 #### This respository contains:
