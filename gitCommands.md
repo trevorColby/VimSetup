@@ -94,12 +94,12 @@
 	-	ctrl+wq - Quit a window
 	-	ctrl+wv - Split windows vertically
 #### ------------------------ Macros Commands -------------------------
-	-	Normal mode: 
-	-	q (followed by any alpha character to name buffer: note can paste it becuase it is same as clipboard) this starts recording keystrokes (any commands)
+	- Normal mode: 
+	- q (followed by any alpha character to name buffer: note can paste it becuase it is same as clipboard) this starts recording keystrokes (any commands)
 	-		     followed by 'q' to end recording, look in status line to check if still recording. To execute command again follow with @'bufferletter' or @@ for previous executed buffer
-	-	:g/'any pattern aka regex pattern'/normal @'buffer'    This allows you to 
-	-	:!g/'any regex pattern'/normal @'buffer' This allows you to apply a macro/buffer to anything not matching regex 
-	-	: (means you are in ex mode)
+	- :g/'any pattern aka regex pattern'/normal @'buffer'    This allows you to 
+	- :!g/'any regex pattern'/normal @'buffer' This allows you to apply a macro/buffer to anything not matching regex 
+	- : (means you are in ex mode)
 	-	:s mean substitute can apply to current line of current buffer(file)
 	-	:%s means substitute all lines
 	-	ctr+f while in ex mode can type ctr+f to get command history (similar to terminal previous command hist)
