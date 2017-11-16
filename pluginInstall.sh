@@ -47,7 +47,7 @@ if [ "$permission" = "y" ]; then
     
     {
     printf "\"*********************** Key Bindings *********************************************" 
-    printf "\"\ev to split window and open .vimrc" 
+    echo "\\ev to split window and open .vimrc" 
     echo "\"\sv to source (run+update) .vimrc" 
     echo "nnoremap <leader>sv :source \$MYVIMRC<cr>" 
     echo "nnoremap <leader>ev :vsplit \$MYVIMRC<cr>" 
@@ -215,7 +215,7 @@ if [ "$permission" = "y" ]; then
     echo "colorscheme onedark" 
     echo "" 
     echo "" 
-   } >> "$HOME/.vimrc"
+    } >> "$HOME/.vimrc"
     fi
 #*********************** ADDING DEIN PLUGIN TO .VIMRC  *********************************
 
@@ -328,8 +328,8 @@ if [ "$permission" = "y" ]; then
     echo "Dein has been installed and updated."
     
     #*********************** Notify user of neccesary powerline font install for Airline theme ******
-    echo "\n"
-    echo "\n"
+    printf "\n"
+    printf "\n"
     echo "Please note for powerline style bar to display correctly, some terminals need special fonts to be installed."
     echo "If you want to utilize these, you will need to enable one of them for both ascii and non-ascii characters."
     echo "e.g iTerm2"
@@ -343,7 +343,7 @@ if [ "$permission" = "y" ]; then
     	# clone
     	git clone https://github.com/powerline/fonts.git --depth=1
     	# install
-    	cd fonts
+    	cd fonts || exit
     	./install.sh
     	# clean-up a bit
     	cd ..
