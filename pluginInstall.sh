@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLUGIN_DIR="$HOME/.vim/bundles"
+PLUGIN_DIR="usr/local/bin/vim/bundles"
 INSTALL_DIR="${PLUGIN_DIR}/repos/github.com/Shougo/dein.vim"
 
 echo "Do you give this script permission to:"

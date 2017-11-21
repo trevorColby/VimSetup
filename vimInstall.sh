@@ -16,8 +16,8 @@ else
   git pull
 fi
 cd "$HOME/src/vim"
-sudo apt-get update
-sudo apt-get install -y \
+brew update
+brew install -y \
   libncurses5-dev \
   libgnome2-dev \
   libgnomeui-dev \
