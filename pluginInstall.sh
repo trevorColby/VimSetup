@@ -1,5 +1,5 @@
 #!usr/bin/env bash
-
+echo "This needs to be updates/fixed please abort"
 PLUGIN_DIR="usr/local/bin/vim/bundles"
 INSTALL_DIR="${PLUGIN_DIR}/repos/github.com/Shougo/dein.vim"
 
