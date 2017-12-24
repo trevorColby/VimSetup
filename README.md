@@ -6,6 +6,7 @@
 - vimInstall.sh  will compile Vim with both python and python3 support
 	- Create a .vimrc file in your home directory
 - pluginInstall.sh is designed to get dein plugin manager
+	- THIS NEEDS SOME TWEAKING (IT IS DESIGNED FOR LINUX or MAC)
 	- Curl an installer.sh for use into your home directory
 	- Run installer.sh: installs dein plugin manager: Shuogo
 	- Create a .vim/bundles directory to store the plugin manager
@@ -22,6 +23,4 @@
 - vimCommands.md
 	- File containing the basics of vim and some slightly more advanced
 	- See macros: they are incredibly helpful
-- Note: Scripting is open to edits
-	- when you pull the respository feel free to change
-	- Common edits: changing where/what things are stored or named
+- Note: Scripting is very much in beta.

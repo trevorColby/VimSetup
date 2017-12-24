@@ -10,7 +10,7 @@ fi
 cd "$HOME/src"
 echo
 if [ ! -d "$HOME/src/vim" ]; then
-  git clone git@github.com:vim/vim.git
+  git clone https://github.com/vim/vim.git 
 else
   cd "$HOME/src/vim"
   git pull
@@ -35,7 +35,7 @@ brew install -y \
   libperl-dev \
   liblua5.1-0-dev \
   luajit \
-  libluajit-5.1-dev
+ libluajit-5.1-dev
 
 # For odiumediae multi-version python  suggestions follow: https://gist.github.com/odiumediae/3b22d09b62e9acb7788baf6fdbb77cf8
 ./configure \
@@ -50,7 +50,6 @@ brew install -y \
    --enable-perlinterp=dynamic \
    --enable-pythoninterp \
    --enable-python3interp \
-   --enable-pythoninterp \
    --enable-rubyinterp=dynamic \
    --with-compiledby="Darcy Parker & Trevor Colby" \
    --with-features=huge \
