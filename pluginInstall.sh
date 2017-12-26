@@ -6,7 +6,6 @@ INSTALL_DIR="${PLUGIN_DIR}/repos/github.com/Shougo/dein.vim"
 echo "Do you give this script permission to:"
 echo " - Alter your .vimrc file: note this will append, recommended fresh start"
 echo " - Install dein plugin manager"
-echo " - Create a temporary file called commands.ex"
 echo "Answer: (y/n)"
 #if check permission continue else quit script
 read -n -r 1 permission 
@@ -20,7 +19,7 @@ if [ "$permission" = "y" ]; then
 
 #*********************** CREATE VIMRC OPTION *********************************
     echo "Would you like this script to create a .vimrc for you?"
-    read -n -r 1 VIMRCCHECK
+    read -r -n1 VIMRCCHECK
     if [ "$VIMRCCHECK" = "y" ]; then
 	    touch "$HOME/.vimrc"
     fi
