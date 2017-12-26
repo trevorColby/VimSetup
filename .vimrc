@@ -21,6 +21,7 @@ nnoremap <C-right> <C-W>l
 "Nerdtree maps
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
 
 "Ctr+] to go to definition with YouCompleteMe
 " nnoremap <C-]> :YcmCompleter GoToDefinition<cr>
@@ -230,89 +231,6 @@ endif
 syntax on
 colorscheme onedark
 
-
-"---------------------Dein Plugin Manager------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=/home/trevor/.vim/bundles/repos/github.com/Shougo/dein.vim
-let g:dein#install_process_timeout = 400
-"let g:ycm_python_binary_path = 'python3'
-" Required:
-if dein#load_state('/home/trevor/.vim/bundles')
-  call dein#begin('/home/trevor/.vim/bundles')
-  " Let dein manage dein
-  " Required:
-  call dein#add('/home/trevor/.vim/bundles/repos/github.com/Shougo/dein.vim')
-
-  "-------------------- Your Plugins Here ----------------
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-"------------------Trevor Colby\'s Preferred Dein Plugin Calls--------
-  call dein#add('Shougo/denite.nvim') "   denite 
-  "call dein#add('Shougo/neocomplete.vim') "neocomplete
-
-  "DEIN HATES YOUCOMPLETEME
-  "https://github.com/Valloric/YouCompleteMe/issues/2591
-  "alternative solution: :call dein#recache_runtimepath()
-  "then call :YcmRestartServer
-  "call dein#add('Valloric/YouCompleteMe', {'merged': 0})
-  "call dein#add('Valloric/YouCompleteMe', {'build': './install.py'})
-  call dein#add('tpope/vim-sensible')   
-  call dein#add('vim-airline/vim-airline')  "vim-airline
-  call dein#add('vim-airline/vim-airline-themes')  "vim-airline-themes
-  call dein#add('luochen1990/rainbow')   "rainbow-parantheses
-  call dein#add('joshdick/onedark.vim') "onedark
-  call dein#add('tpope/vim-commentary') "commentary
-  call dein#add('hail2u/vim-css3-syntax') "css3-syntax
-  call dein#add('tpope/vim-dispatch') "dispatch
-  call dein#add('editorconfig/editorconfig-vim') "Editorconfig
-  call dein#add('kana/vim-fakeclip') "fakeclip
-  call dein#add('tpope/vim-fugitive') "fugitive
-  call dein#add('tpope/vim-git') "  vim-git
-  call dein#add('airblade/vim-gitgutter') "  gitgutter
-  call dein#add('pangloss/vim-javascript') "  javascript
-  call dein#add('elzr/vim-json') "  json
-  call dein#add('tpope/vim-markdown') "  markdown
-  call dein#add('nelstrom/vim-markdown-folding') "  markdown-folding
-  call dein#add('scrooloose/nerdtree') "  nerdtree
-  call dein#add('tpope/vim-repeat') "  repeat
-  call dein#add('jpalardy/vim-slime') "  slime
-  call dein#add('honza/vim-snippets') "  snippets
-  call dein#add('tpope/vim-surround') "  surround
-  " call dein#add('scrooloose/syntastic') "  syntastic
-  call dein#add('vim-syntastic/syntastic') "syntastic new branch
-  call dein#add('majutsushi/tagbar') "  tagbar
-  call dein#add('ericpruitt/tmux.vim') "  tmux
-  call dein#add('leafgarland/typescript-vim') "  typescript-vim
-  call dein#add('tpope/vim-unimpaired') "  unimpaired
-  call dein#add('Shougo/vimproc.vim') "  vimproc
-  call dein#add('tpope/vim-rhubarb') "  rubarb
-  call dein#add('palantir/tslint') " typescript linter
-  call dein#add('ap/vim-css-color') " css color preview (highlighter)
-  call dein#add('bitc/vim-hdevtools')
-  call dein#add('hushicai/tagbar-javascript.vim') "tagbars addon <F8>
-  " You can specify revision/branch/tag.
-  "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-"End dein plugin manager-------------------------
-
 "This is ugly but, dein does not play nicely with YouCompleteMe
 "Had to use Vundle just for that one
 set nocompatible              " be iMproved, required
@@ -325,10 +243,43 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim' "Install vundle: this needs to be cloned first
+Plugin 'Valloric/YouCompleteMe' "This one is tricky needs to have library compiled first
 Plugin 'Quramy/tsuquyomi' "  tsuquyomi
 Plugin 'Shougo/vimproc.vim' "  vimproc
+Plugin 'tpope/vim-sensible'   
+Plugin 'vim-airline/vim-airline'  "vim-airline
+Plugin 'vim-airline/vim-airline-themes'  "vim-airline-themes
+Plugin 'luochen1990/rainbow'   "rainbow-parantheses
+Plugin 'joshdick/onedark.vim' "onedark
+Plugin 'tpope/vim-commentary' "commentary
+Plugin 'hail2u/vim-css3-syntax' "css3-syntax
+Plugin 'tpope/vim-dispatch' "dispatch
+Plugin 'editorconfig/editorconfig-vim' "Editorconfig
+Plugin 'kana/vim-fakeclip' "fakeclip
+Plugin 'tpope/vim-fugitive' "fugitive
+Plugin 'tpope/vim-git' "  vim-git
+Plugin 'airblade/vim-gitgutter' "  gitgutter
+Plugin 'pangloss/vim-javascript' "  javascript
+Plugin 'elzr/vim-json' "  json
+Plugin 'tpope/vim-markdown' "  markdown
+Plugin 'nelstrom/vim-markdown-folding' "  markdown-folding
+Plugin 'scrooloose/nerdtree' "  nerdtree
+Plugin 'tpope/vim-repeat' "  repeat
+Plugin 'jpalardy/vim-slime' "  slime
+Plugin 'honza/vim-snippets' "  snippets
+Plugin 'tpope/vim-surround' "  surround
+  "Plugin ('scrooloose/syntastic') "  syntastic
+Plugin 'vim-syntastic/syntastic' "syntastic new branch
+Plugin 'majutsushi/tagbar' "  tagbar
+Plugin 'ericpruitt/tmux.vim' "  tmux
+Plugin 'leafgarland/typescript-vim' "  typescript-vim
+Plugin 'tpope/vim-unimpaired' "  unimpaired
+Plugin 'tpope/vim-rhubarb' "  rubarb
+Plugin 'palantir/tslint' " typescript linter
+Plugin 'ap/vim-css-color' " css color preview (highlighter)
+Plugin 'bitc/vim-hdevtools'
+Plugin 'hushicai/tagbar-javascript.vim' "tagbars addon <F8>
   
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -344,5 +295,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
 
 
