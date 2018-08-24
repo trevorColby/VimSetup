@@ -1,4 +1,4 @@
-"Trevor Colby"10/18/2017".vimrc custom file"*********************** Key Bindings *********************************************\ev to split window and open .vimrc
+"Trevor Colby"8/24/2018".vimrc custom file"*********************** Key Bindings *********************************************\ev to split window and open .vimrc
 "\sv to source (run+update) .vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -13,6 +13,9 @@ xnoremap <leader>p "_dP
 set number
 set mouse=a
 set nowrap
+set ignorecase
+"Disable Swap File Creation
+set noswapfile
 "Commands to setup dein.vim from Shougo
 "Plugin Manager
 "https://github.com/Shougo/dein.vim
@@ -26,6 +29,9 @@ nnoremap <C-left> <C-W>h
 nnoremap <C-down> <C-W>j
 nnoremap <C-up> <C-W>k
 nnoremap <C-right> <C-W>l
+
+"break the line at the cursor
+nnoremap <silent> <leader><CR> i<CR><ESC>
 
 "Nerdtree maps
 nnoremap <leader>nt :NERDTreeToggle<CR>
@@ -193,22 +199,22 @@ colorscheme onedark
 
 "************************* Type Script *********************************
 "Rename symbols
-" autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
-" autocmd FileType typescript nmap <buffer> <Leader>E <Plug>(TsuquyomiRenameSymbolC)
-" autocmd FileType typescript nmap <buffer> <Leader>f <Plug>(TsuquyomiQuickFix)
-" autocmd FileType typescript nmap <buffer> <Leader>i <Plug>(TsuquyomiImport)
+autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
+autocmd FileType typescript nmap <buffer> <Leader>E <Plug>(TsuquyomiRenameSymbolC)
+autocmd FileType typescript nmap <buffer> <Leader>f <Plug>(TsuquyomiQuickFix)
+autocmd FileType typescript nmap <buffer> <Leader>i <Plug>(TsuquyomiImport)
 
 autocmd FileType typescript setlocal completeopt+=menu
 autocmd FileType typescript setlocal completeopt-=preview
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_completion_preview = 0
+" let g:tsuquyomi_completion_detail = 1
+" let g:tsuquyomi_completion_preview = 0
 
-if has("ballooneval")
-  set ballooneval
-  autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
-else
-  autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-endif
+" if has("ballooneval")
+  " set ballooneval
+  " autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+" else
+  " autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+" endif
 
 let g:tsuquyomi_use_local_typescript = 1
 let g:tsuquyomi_disable_quickfix = 1 "Using syntastic instead
@@ -216,6 +222,17 @@ let g:tsuquyomi_disable_quickfix = 1 "Using syntastic instead
 let g:tsuquyomi_single_quote_import = 1
 
 let g:tsuquyomi_javascript_support = 1
+
+"************************** Syntastic Plugin Pref *********************************
+let g:syntastic_check_on_wq=0
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
+let g:syntastic_javascript_checkers=["jshint","eslint"]
+let g:syntastic_typescript_checkers = ["tsuquyomi","tslint"] " You shouldn't use 'tsc' checker.
+
+let g:syntastic_sass_checkers=["sassc"]
+let g:syntastic_scss_checkers=["sassc"]
 
 "************************** Vundle Plugin Manager *********************************
 
@@ -289,7 +306,8 @@ call vundle#begin()
 	Plugin 'jpalardy/vim-slime' "  slime
 	Plugin 'honza/vim-snippets' "  snippets
 	Plugin 'tpope/vim-surround' "  surround
-	Plugin 'scrooloose/syntastic' "  syntastic
+	" Plugin 'scrooloose/syntastic' "  syntastic
+	Plugin 'vim-syntastic/syntastic' "  syntastic
 	Plugin 'majutsushi/tagbar' "  tagbar
 	Plugin 'ericpruitt/tmux.vim' "  tmux
 	Plugin 'Quramy/tsuquyomi' "  tsuquyomi
