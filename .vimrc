@@ -224,7 +224,14 @@ if (empty($TMUX))
   endif
 
   if (has("termguicolors"))
-	set termguicolors
+        "Commented Out: "set termguicolors"
+	"Causes issues with Vim colorscheme on remote server
+	"	- Setup:
+	"	  - Alacritty
+	"	  - Tmux 2.8
+	"	  - ssh onto remote server
+	"	  - vim
+	"set termguicolors
   endif
 endif
 
