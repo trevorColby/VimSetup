@@ -37,14 +37,10 @@ let g:ycm_semantic_triggers['typescript'] = ['.']
 let g:ycm_filetype_blacklist={'unite': 1}
 
 
-"set dd to blackhole register: use x for cut instead
-
-nnoremap x d
-vnoremap x d
-nnoremap xx dd
-vnoremap xx dd
-nnoremap d "_d
-vnoremap d "_d
+"modify the black hole register with remap using leader key
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
 
 "My basic preferences for usability/visual
 set number

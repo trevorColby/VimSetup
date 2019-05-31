@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Second prototype trial alpha
+printf "newPluginInstall 0.0.1
 Automated plugin install leveraging Vundle
 Creator: Trevor Colby
 Last Updated: 12/26/2017"
@@ -69,8 +69,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     	rm -rf fonts
     	echo "Finished installing fonts"
     fi   
-	
-
 else
 
 #********************** IF PERMISSION NOT GRANTED ***********************************************
